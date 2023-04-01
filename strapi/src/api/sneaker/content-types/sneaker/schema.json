@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sneakers",
+  "info": {
+    "singularName": "sneaker",
+    "pluralName": "sneakers",
+    "displayName": "Sneaker"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "shoe": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    }
+  }
+}
