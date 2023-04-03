@@ -2,6 +2,7 @@
   "extends": [
     //"next/core-web-vitals",
     "plugin:react/recommended",
+    "plugin:storybook/recommended",
     "airbnb",
     "airbnb/hooks",
     "airbnb-typescript/base",
@@ -15,9 +16,14 @@
   "parser": "@typescript-eslint/parser",
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx"],
+      "files": ["*.ts", "*.tsx", "*.stories.@(ts|tsx)"],
+      "excludedFiles": [".storybook/*.ts"],
+      "rules": {
+        "storybook/hierarchy-separator": "error",
+        "storybook/default-exports": "off"
+      },
       "parserOptions": {
-        "project": ["tsconfig.json"]
+        "project": ["./tsconfig.json"]
       }
     }
   ],
@@ -28,7 +34,13 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier", "simple-import-sort"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "eslint-plugin-storybook",
+    "simple-import-sort"
+  ],
   "rules": {
     "import/extensions": 0,
     "react/jsx-filename-extension": 0,
@@ -41,7 +53,6 @@
     "react/react-in-jsx-scope": 0,
     "@typescript-eslint/no-shadow": 0,
     "@typescript-eslint/no-unused-vars": 1,
-    //"consistent-return": 0,
     "react/function-component-definition": [
       2,
       {
