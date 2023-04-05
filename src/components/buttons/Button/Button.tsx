@@ -1,7 +1,5 @@
 import { cva } from 'class-variance-authority';
 
-import './button.css';
-
 export type ButtonVariant = 'contained' | 'outlined';
 export type ButtonSize = 'small' | 'medium';
 
@@ -41,6 +39,10 @@ const buttonClassNames = cva(
         outlined: 'border-secondary hover:border-primary',
       },
     },
+    defaultVariants: {
+      size: 'small',
+      variant: 'outlined',
+    },
   }
 );
 
@@ -49,8 +51,8 @@ export const Button = ({
   loading = false,
   startIcon,
   endIcon,
-  size = 'medium',
-  variant = 'contained',
+  size = 'small',
+  variant = 'outlined',
   ...props
 }: ButtonProps) => (
   <button
@@ -63,7 +65,7 @@ export const Button = ({
       <>
         {!!startIcon && <span data-testid={BUTTON_TEST_IDS.START_ICON}>{startIcon}</span>}
         <span data-testid={BUTTON_TEST_IDS.CHILDREN}>{children}</span>
-        {!!endIcon && <span data-testid={BUTTON_TEST_IDS.START_ICON}>{endIcon}</span>}
+        {!!endIcon && <span data-testid={BUTTON_TEST_IDS.END_ICON}>{endIcon}</span>}
       </>
     )}
 

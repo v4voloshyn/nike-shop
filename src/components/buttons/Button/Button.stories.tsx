@@ -5,7 +5,7 @@ import { Button, ButtonProps } from './Button';
 const buttonProps: ButtonProps = {
   children: 'button label',
   loading: false,
-  size: 'medium',
+  size: 'small',
   variant: 'contained',
 };
 

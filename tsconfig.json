@@ -22,6 +22,6 @@
       "@/utils/api": ["./src/utils/api"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".eslintrc.json"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".eslintrc.json", "setupTests.js"],
   "exclude": ["node_modules"]
 }
