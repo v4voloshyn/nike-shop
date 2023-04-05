@@ -1,32 +1,46 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from './Button';
+import { Button, ButtonProps } from './Button';
+
+const buttonProps: ButtonProps = {
+  children: 'button label',
+  loading: false,
+  size: 'medium',
+  variant: 'contained',
+};
+
+type Story = StoryObj<typeof Button>;
+
+const ButtonTemplate: Story = {
+  args: {
+    ...buttonProps,
+  },
+};
+
+export const Playground: Story = {
+  args: {
+    ...buttonProps,
+    variant: 'contained',
+  },
+};
+
+export const Contained: Story = {
+  args: {
+    ...buttonProps,
+    variant: 'contained',
+  },
+};
+
+export const Outlined: Story = {
+  args: {
+    ...Contained.args,
+    variant: 'outlined',
+  },
+};
 
 const meta: Meta<typeof Button> = {
-  title: 'ui-kit/Button',
-  component: Button
+  title: 'ui-kit/button',
+  component: Button,
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
-
-export const Primary: Story = {
-  args: {
-    backgroundColor: '#ff0',
-    label: 'Button label'
-  }
-};
-
-export const Secondary: Story = {
-  args: {
-    ...Primary.args,
-    label: '😄👍😍💯'
-  }
-};
-
-export const Tertiary: Story = {
-  args: {
-    ...Primary.args,
-    label: '📚📕📈🤓'
-  }
-};
