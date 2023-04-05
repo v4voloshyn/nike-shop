@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Button, ButtonProps } from './Button';
 
 const buttonProps: ButtonProps = {
-  children: 'button label',
+  children: 'Default button label',
   loading: false,
   size: 'small',
   variant: 'contained',
@@ -20,6 +20,7 @@ const ButtonTemplate: Story = {
 export const Playground: Story = {
   args: {
     ...buttonProps,
+    children: 'Playground',
     variant: 'contained',
   },
 };
@@ -27,6 +28,7 @@ export const Playground: Story = {
 export const Contained: Story = {
   args: {
     ...buttonProps,
+    children: 'Contained',
     variant: 'contained',
   },
 };
@@ -34,6 +36,7 @@ export const Contained: Story = {
 export const Outlined: Story = {
   args: {
     ...Contained.args,
+    children: 'Outlined',
     variant: 'outlined',
   },
 };
