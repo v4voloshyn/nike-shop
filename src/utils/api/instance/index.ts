@@ -15,7 +15,7 @@ export class API {
     this.request = axios.create({
       baseURL: options.baseUrl,
       timeout: 1000,
-      headers: { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` }
+      headers: { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` },
     });
   }
 }

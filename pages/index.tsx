@@ -11,7 +11,7 @@ export async function getStaticProps(_context) {
   const response = await strapiApi.request.get('/sneakers/1');
   console.log('@@', response.data);
   return {
-    props: { data: response.data.data }
+    props: { data: response.data.data },
   };
 }
 
