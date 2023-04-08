@@ -15,9 +15,12 @@ export class API {
     this.request = axios.create({
       baseURL: options.baseUrl,
       timeout: 1000,
-      headers: { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` },
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${process.env.STRAPI_TOKEN}`,
+      },
     });
   }
 }
-
-export const strapiApi = new API({ baseUrl: 'http://localhost:1337/api' });
+// change baseUrl before deploy
+export const strapiApi = new API({ baseUrl: 'http://127.0.0.1:1337/api' });
