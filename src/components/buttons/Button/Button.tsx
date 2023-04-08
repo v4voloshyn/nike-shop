@@ -35,8 +35,9 @@ const buttonClassNames = cva(
         small: 'py-[6px] px-[20px]',
       },
       variant: {
-        contained: 'border-primary bg-primary text-white hover:border-grey hover:bg-grey',
-        outlined: 'border-secondary hover:border-primary',
+        contained:
+          'border-black-100 bg-black-100 text-white hover:border-black-200 hover:bg-black-200',
+        outlined: 'border-gray-200 hover:border-black-100',
       },
     },
     defaultVariants: {
@@ -73,7 +74,7 @@ export const Button = ({
       <span data-testid={BUTTON_TEST_IDS.LOADER}>
         <svg
           aria-hidden='true'
-          className='inline h-4 w-4 animate-spin text-grey'
+          className='text-grey inlinblack-2004 w-4 animate-spin'
           viewBox='0 0 100 101'
         >
           <path
