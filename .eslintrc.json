@@ -17,7 +17,6 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.stories.@(ts|tsx)"],
-      "excludedFiles": [".storybook/*.ts"],
       "rules": {
         "storybook/hierarchy-separator": "error",
         "storybook/default-exports": "off",
