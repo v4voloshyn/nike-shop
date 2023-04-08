@@ -5,14 +5,24 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        white: '#fff',
-        secondary: '#ccc',
-        primary: '#111',
-        grey: '#757575'
-      }
+    colors: {
+      white: '#ffffff',
+      'black-100': '#111111',
+      'black-200': '#757575',
+      'gray-100': '#f5f5f5',
+      'gray-200': '#e5e5e5',
+      'gray-300': '#7e7e7e'
     },
+    
+      /* black-100 - black-100  
+      gray - black-200 
+      gray-200 - gray-200 */
+    extend: {
+      fontFamily: {
+        helvetica: ['Helvetica', 'sans-serif'],
+        nike: ['Nike', 'sans-serif']
+      }
+    }
   },
   plugins: []
 }
