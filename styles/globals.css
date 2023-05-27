@@ -17,7 +17,7 @@ body {
 
 @layer base {
   html {
-    font-family: 'Helvetica', system-ui, sans-serif;
+    font-family: 'Helvetica', sans-serif;
     font-weight: 400;
     font-size: 16px;
   }

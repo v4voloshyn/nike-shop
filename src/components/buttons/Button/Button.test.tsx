@@ -74,7 +74,8 @@ describe('Button size', () => {
 
 describe('Button variant', () => {
   test('should correct show contained variant when provided', () => {
-    const classNames = 'border-primary bg-primary text-white hover:border-grey hover:bg-grey';
+    const classNames =
+      'border-black-100 bg-black-100 text-white hover:border-black-200 hover:bg-black-200';
     render(<Button {...buttonProps} variant='contained' />);
 
     const container = screen.getByTestId(BUTTON_TEST_IDS.CONTAINER);
@@ -83,7 +84,7 @@ describe('Button variant', () => {
   });
 
   test('should correct show outlined variant when provided', () => {
-    const classNames = 'border-secondary hover:border-primary';
+    const classNames = 'border-gray-200 hover:border-black-100';
     render(<Button {...buttonProps} variant='outlined' />);
 
     const container = screen.getByTestId(BUTTON_TEST_IDS.CONTAINER);
@@ -92,7 +93,7 @@ describe('Button variant', () => {
   });
 
   test('should be outlined by default even if variant is not provided', () => {
-    const classNames = 'border-secondary hover:border-primary';
+    const classNames = 'border-gray-200 hover:border-black-100';
     render(<Button {...buttonProps} />);
 
     const container = screen.getByTestId(BUTTON_TEST_IDS.CONTAINER);
