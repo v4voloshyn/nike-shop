@@ -8,6 +8,8 @@ export interface ButtonProps extends ReactTagProps<'button'> {
   children: React.ReactNode;
   /** loading */
   loading?: boolean;
+  /** href */
+  href?: string;
   /** start icon */
   startIcon?: React.ReactNode;
   /** end icon */
@@ -26,8 +28,8 @@ export const BUTTON_TEST_IDS = {
   START_ICON: 'button-startIcon',
 };
 
-const buttonClassNames = cva(
-  'w-full flex justify-center rounded-full border-[1.5px] align-middle text-[16px]',
+export const buttonClassNames = cva(
+  'w-full flex justify-center items-center rounded-full border-[1.5px] align-middle text-[16px]',
   {
     variants: {
       size: {
@@ -46,10 +48,12 @@ const buttonClassNames = cva(
     },
   }
 );
+console.log('@@@', buttonClassNames());
 
 export const Button = ({
   children,
   loading = false,
+  href,
   startIcon,
   endIcon,
   size = 'small',
@@ -74,7 +78,7 @@ export const Button = ({
       <span data-testid={BUTTON_TEST_IDS.LOADER}>
         <svg
           aria-hidden='true'
-          className='text-grey inlinblack-2004 w-4 animate-spin'
+          className='text-grey black-2004 inline w-4 animate-spin'
           viewBox='0 0 100 101'
         >
           <path

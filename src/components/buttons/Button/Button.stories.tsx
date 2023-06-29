@@ -42,7 +42,7 @@ export const Outlined: Story = {
 };
 
 const meta: Meta<typeof Button> = {
-  title: 'ui-kit/button',
+  title: 'ui-kit/Buttons/button',
   component: Button,
 };
 

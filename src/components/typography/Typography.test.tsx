@@ -28,7 +28,7 @@ describe('Typography variants', () => {
 });
 
 describe('Typography', () => {
-  test('should render div tage by default', () => {
+  test('should render div tag by default', () => {
     render(<Typography {...typographyProps} />);
 
     const container = screen.getByTestId(TYPOGRAPHY_TEST_IDS.CONTAINER);

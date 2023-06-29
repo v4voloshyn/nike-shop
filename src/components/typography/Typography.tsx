@@ -5,6 +5,7 @@ export type TypographyVariant =
   | 'body-1'
   | 'body-2'
   | 'body-3'
+  | 'subtitle'
   | 'link';
 export type TypographyTag = 'h1' | 'h2' | 'span' | 'div' | 'p';
 export interface TypographyProps {

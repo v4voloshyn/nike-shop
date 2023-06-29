@@ -1,7 +1,6 @@
+import type { TypographyProps } from '@/ui/typography';
+import { Typography } from '@/ui/typography';
 import type { Meta, StoryObj } from '@storybook/react';
-
-import type { TypographyProps } from './Typography';
-import { Typography } from './Typography';
 
 const typographiesProps: TypographyProps[] = [
   {

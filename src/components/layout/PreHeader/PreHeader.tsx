@@ -1,8 +1,9 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 import Link from 'next/link';
 import { FC } from 'react';
 
-import { ConverseIcon, JordanIcon } from '../../icons';
+import { ConverseIcon, JordanIcon } from '@/ui/icons';
+
+import { Typography } from '../../typography';
 
 interface PreHeaderProps {}
 
@@ -18,26 +19,30 @@ export const PreHeader: FC<PreHeaderProps> = () => (
     <ul className='flex'>
       <li className='flex h-full items-center px-3'>
         <Link href='/'>
-          <JordanIcon />
+          <JordanIcon className='hover:opacity-60' />
         </Link>
       </li>
-      <li className='flex h-full items-center px-3 '>
-        <ConverseIcon />
+      <li className='flex h-full items-center px-3'>
+        <Link href='/'>
+          <ConverseIcon className='hover:opacity-60' />
+        </Link>
       </li>
     </ul>
     <nav>
-      <ul className='flex h-full items-center gap-1 text-xs font-normal'>
+      <ul className='flex h-full items-center text-xs font-normal'>
         {PRE_HEADER_ROUTES.map((route, index) => {
           const lastElement = PRE_HEADER_ROUTES.length - 1 === index;
           return (
-            <li className='h-full leading-[14px]'>
+            <li className='leading-[14px]0 h-full' key={route.name}>
               <Link
                 href={route.href}
-                className='pre-brand-item inline-flex h-full items-center hover:text-black-200'
+                className='pre-brand-item mx-1 inline-flex h-full items-center px-1 hover:text-black-200'
               >
-                {route.name}
+                <Typography variant='body-3' tag='span'>
+                  {route.name}
+                </Typography>
               </Link>
-              {!lastElement && <span className='mx-2'>|</span>}
+              {!lastElement && <span className='mr-2'>|</span>}
             </li>
           );
         })}

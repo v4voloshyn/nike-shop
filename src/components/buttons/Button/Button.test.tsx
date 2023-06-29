@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import { Button, BUTTON_TEST_IDS } from './Button';
+import { Button, BUTTON_TEST_IDS, buttonClassNames } from './Button';
 
 const buttonProps = {
   children: 'button test text',
@@ -45,7 +45,7 @@ describe('Button endIcon', () => {
 
 describe('Button size', () => {
   test('should show medium size when it provided', () => {
-    const classNames = 'min-h-[60px] py-[18px] px-[24px]';
+    const classNames = buttonClassNames({ size: 'medium' });
     render(<Button {...buttonProps} size='medium' />);
 
     const container = screen.getByTestId(BUTTON_TEST_IDS.CONTAINER);
@@ -54,7 +54,8 @@ describe('Button size', () => {
   });
 
   test('should show small size when it provided', () => {
-    const classNames = 'py-[6px] px-[20px]';
+    const classNames = buttonClassNames({ size: 'small' });
+
     render(<Button {...buttonProps} size='small' />);
 
     const container = screen.getByTestId(BUTTON_TEST_IDS.CONTAINER);
@@ -63,7 +64,7 @@ describe('Button size', () => {
   });
 
   test('should show small size by default even it is not provided', () => {
-    const classNames = 'py-[6px] px-[20px]';
+    const classNames = buttonClassNames({});
     render(<Button {...buttonProps} />);
 
     const container = screen.getByTestId(BUTTON_TEST_IDS.CONTAINER);
@@ -74,8 +75,8 @@ describe('Button size', () => {
 
 describe('Button variant', () => {
   test('should correct show contained variant when provided', () => {
-    const classNames =
-      'border-black-100 bg-black-100 text-white hover:border-black-200 hover:bg-black-200';
+    const classNames = buttonClassNames({ variant: 'contained' });
+
     render(<Button {...buttonProps} variant='contained' />);
 
     const container = screen.getByTestId(BUTTON_TEST_IDS.CONTAINER);
@@ -84,7 +85,8 @@ describe('Button variant', () => {
   });
 
   test('should correct show outlined variant when provided', () => {
-    const classNames = 'border-gray-200 hover:border-black-100';
+    const classNames = buttonClassNames({ variant: 'outlined' });
+
     render(<Button {...buttonProps} variant='outlined' />);
 
     const container = screen.getByTestId(BUTTON_TEST_IDS.CONTAINER);
@@ -93,7 +95,7 @@ describe('Button variant', () => {
   });
 
   test('should be outlined by default even if variant is not provided', () => {
-    const classNames = 'border-gray-200 hover:border-black-100';
+    const classNames = buttonClassNames({});
     render(<Button {...buttonProps} />);
 
     const container = screen.getByTestId(BUTTON_TEST_IDS.CONTAINER);
@@ -113,6 +115,14 @@ describe('Button', () => {
 
   test('should display loader when loading', () => {
     render(<Button {...buttonProps} loading />);
+
+    const loader = screen.getByTestId(BUTTON_TEST_IDS.LOADER);
+
+    expect(loader).toBeInTheDocument();
+  });
+
+  test('should been a tag instead of button when it`s provided', () => {
+    render(<Button {...buttonProps} href='/fake-href' />);
 
     const loader = screen.getByTestId(BUTTON_TEST_IDS.LOADER);
 

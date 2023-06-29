@@ -42,6 +42,7 @@
     "simple-import-sort"
   ],
   "rules": {
+    "jsx-a11y/anchor-is-valid": 0,
     "import/extensions": 0,
     "react/jsx-filename-extension": 0,
     "object-curly-spacing": [

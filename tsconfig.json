@@ -18,11 +18,13 @@
     "paths": {
       "@/*": ["./*"],
       "@/assets/*": ["assets/*"],
+      "@/sections/*": ["./src/sections/*"],
       "@/utils/helpers": ["./src/utils/helpers"],
       "@/utils/constants": ["./src/utils/constants"],
       "@/utils/api": ["./src/utils/api"],
       "@/ui": ["./src/components"],
-      "@/ui/icons": ["./src/components/icons"]
+      "@/ui/icons": ["./src/components/icons"],
+      "@/ui/typography": ["./src/components/typography"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".eslintrc.json", "setupTests.js"],
