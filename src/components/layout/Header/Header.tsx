@@ -11,6 +11,7 @@ const HEADER_ROUTES = [
   { name: 'Men', href: '/' },
   { name: 'Woman', href: '/' },
   { name: 'Kids', href: '/' },
+  { name: 'Accessories', href: '/' },
   { name: 'Sale', href: '/' },
 ];
 

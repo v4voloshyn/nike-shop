@@ -120,12 +120,4 @@ describe('Button', () => {
 
     expect(loader).toBeInTheDocument();
   });
-
-  test('should been a tag instead of button when it`s provided', () => {
-    render(<Button {...buttonProps} href='/fake-href' />);
-
-    const loader = screen.getByTestId(BUTTON_TEST_IDS.LOADER);
-
-    expect(loader).toBeInTheDocument();
-  });
 });

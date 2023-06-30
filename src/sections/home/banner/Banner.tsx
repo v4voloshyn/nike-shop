@@ -7,7 +7,7 @@ interface BannerProps {}
 
 export const Banner: FC<BannerProps> = () => (
   <section className='mt-[3rem]'>
-    <div className='align-end flex flex-col text-center'>
+    <div className='align-end flex flex-col items-center text-center'>
       <Typography tag='h1' variant='title-1'>
         LEADERS LIKE NEVER BEFORE
       </Typography>
@@ -16,13 +16,11 @@ export const Banner: FC<BannerProps> = () => (
           England National Team Collection
         </Typography>
       </div>
-      <div className='flex justify-center'>
-        <Link href='#' className='mt-7'>
-          <Button variant='contained' size='small'>
-            Shop
-          </Button>
-        </Link>
-      </div>
+      <Link href='#' className='mt-7'>
+        <Button variant='contained' size='small'>
+          Shop
+        </Button>
+      </Link>
     </div>
   </section>
 );

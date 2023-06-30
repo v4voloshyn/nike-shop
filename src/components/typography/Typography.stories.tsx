@@ -12,6 +12,10 @@ const typographiesProps: TypographyProps[] = [
     variant: 'title-2',
   },
   {
+    children: 'body 1',
+    variant: 'body-1',
+  },
+  {
     children: 'body 2',
     variant: 'body-2',
   },
@@ -56,8 +60,9 @@ export const AllTypographies = () => (
 );
 
 const meta: Meta<typeof Typography> = {
-  title: 'ui-kit/typography',
+  title: 'ui-kit/Typography',
   component: Typography,
+  tags: ['autodocs'],
 };
 
 export default meta;

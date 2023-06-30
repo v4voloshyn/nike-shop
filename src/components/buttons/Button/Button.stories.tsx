@@ -41,9 +41,13 @@ export const Outlined: Story = {
   },
 };
 
+/**
+ * Button component
+ */
 const meta: Meta<typeof Button> = {
-  title: 'ui-kit/Buttons/button',
+  title: 'ui-kit/Buttons/Button',
   component: Button,
+  tags: ['autodocs'],
 };
 
 export default meta;

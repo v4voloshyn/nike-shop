@@ -33,7 +33,7 @@ export const PreHeader: FC<PreHeaderProps> = () => (
         {PRE_HEADER_ROUTES.map((route, index) => {
           const lastElement = PRE_HEADER_ROUTES.length - 1 === index;
           return (
-            <li className='leading-[14px]0 h-full' key={route.name}>
+            <li className='h-full truncate leading-[14px]' key={route.name}>
               <Link
                 href={route.href}
                 className='pre-brand-item mx-1 inline-flex h-full items-center px-1 hover:text-black-200'
@@ -42,7 +42,11 @@ export const PreHeader: FC<PreHeaderProps> = () => (
                   {route.name}
                 </Typography>
               </Link>
-              {!lastElement && <span className='mr-2'>|</span>}
+              {!lastElement && (
+                <Typography variant='body-3' tag='span'>
+                  |
+                </Typography>
+              )}
             </li>
           );
         })}
