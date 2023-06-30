@@ -1,4 +1,7 @@
 export interface IconButtonProps {
+  /**
+   * icon as button
+   */
   icon: React.ReactNode;
 }
 

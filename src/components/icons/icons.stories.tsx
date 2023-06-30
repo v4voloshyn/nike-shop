@@ -3,7 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ICON_LIST } from './storybook';
 
 const meta: Meta = {
-  title: 'ui-kit/iconography',
+  title: 'ui-kit/Iconography',
+  tags: ['autodocs'],
 };
 
 type Story = StoryObj;

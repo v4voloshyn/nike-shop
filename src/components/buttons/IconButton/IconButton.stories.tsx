@@ -16,7 +16,10 @@ const IconButtonTemplate: Story = {
 };
 const defaultIcon = <Icons.HeartIcon />;
 
-export const PlaygroundIcon: Story = {
+/**
+ * Icon button component
+ * */
+export const DefaultButton: Story = {
   ...IconButtonTemplate,
   args: {
     ...iconButtonProps,
@@ -25,14 +28,18 @@ export const PlaygroundIcon: Story = {
 };
 
 const meta: Meta<typeof IconButton> = {
-  title: 'ui-kit/Buttons/icon-button',
+  title: 'ui-kit/Buttons/Icon button',
   component: IconButton,
   argTypes: {
     icon: {
-      options: ICON_LIST,
       control: { type: 'select' },
+      options: Object.keys(ICON_LIST),
+      mapping: ICON_LIST,
+      defaultValue: ICON_LIST.YoutubeIcon,
     },
   },
+
+  tags: ['autodocs'],
 };
 
 export default meta;

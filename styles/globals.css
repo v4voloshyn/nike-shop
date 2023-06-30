@@ -101,7 +101,7 @@ body {
   }
 
   .body-1 {
-    @apply font-helvetica text-[1rem] font-[500] leading-[1.15rem];
+    @apply font-helvetica text-[1rem] font-[500] leading-[1.5rem];
   }
 
   .body-2 {
