@@ -33,17 +33,17 @@ export const PreHeader: FC<PreHeaderProps> = () => (
         {PRE_HEADER_ROUTES.map((route, index) => {
           const lastElement = PRE_HEADER_ROUTES.length - 1 === index;
           return (
-            <li className='h-full truncate leading-[14px]' key={route.name}>
+            <li className='mr-1 h-full truncate leading-[14px]' key={route.name}>
               <Link
                 href={route.href}
                 className='pre-brand-item mx-1 inline-flex h-full items-center px-1 hover:text-black-200'
               >
-                <Typography variant='body-3' tag='span'>
+                <Typography variant='title-5' tag='span'>
                   {route.name}
                 </Typography>
               </Link>
               {!lastElement && (
-                <Typography variant='body-3' tag='span'>
+                <Typography variant='title-5' tag='span'>
                   |
                 </Typography>
               )}

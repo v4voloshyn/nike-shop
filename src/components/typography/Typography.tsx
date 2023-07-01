@@ -2,6 +2,8 @@ export type TypographyVariant =
   | 'title-1'
   | 'title-2'
   | 'title-3'
+  | 'title-4'
+  | 'title-5'
   | 'body-1'
   | 'body-2'
   | 'body-3'

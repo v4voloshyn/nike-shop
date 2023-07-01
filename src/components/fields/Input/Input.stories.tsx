@@ -19,15 +19,16 @@ export const Playground: Story = {
   argTypes: {
     startIcon: {
       control: { type: 'select' },
-      options: Object.keys(ICON_LIST),
+      options: ICON_LIST,
     },
   },
-  // @ts-expect-error
-  render: ({ startIcon }) => <Input startIcon={<IconButton icon={ICON_LIST[startIcon]} />} />,
+  render: ({ containerClassnames, ...args }) => (
+    <Input containerClassnames={`border-2 ${containerClassnames}`} {...args} />
+  ),
 };
 
 /**
- * Input component with icon
+ * Input component with start icon
  */
 const meta: Meta<typeof Input> = {
   title: 'ui-kit/Fields/Input',

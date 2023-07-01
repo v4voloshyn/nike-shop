@@ -2,7 +2,9 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 import { IconButton, Typography } from '@/ui';
-import { CartIcon, HeartIcon, NikeIcon } from '@/ui/icons';
+import { CartIcon, FindIcon, HeartIcon, NikeIcon } from '@/ui/icons';
+
+import { Input } from '../../fields';
 
 interface HeaderProps {}
 
@@ -16,14 +18,17 @@ const HEADER_ROUTES = [
 ];
 
 export const Header: FC<HeaderProps> = () => (
-  <header className='flex h-[64px] items-center justify-between px-[36px]'>
-    <Link className='my-[1px] flex h-[59px] w-[59px] items-center px-3' href='/'>
-      <NikeIcon className='scale-[333%] justify-self-end hover:opacity-60' />
+  <header className='relative flex h-[64px] items-center justify-between truncate px-[36px]'>
+    <Link
+      className='my-[1px] flex h-[59px] w-[59px] flex-shrink-0 flex-grow-0 items-center px-3'
+      href='/'
+    >
+      <NikeIcon className='ml-3 scale-[333%] justify-self-end hover:opacity-60' />
     </Link>
-    <nav className='header-nav'>
-      <ul className='flex h-full items-center text-base font-normal'>
+    <nav className='header-nav max-h-full '>
+      <ul className='flex h-full flex-wrap items-center py-3 text-base font-normal '>
         {HEADER_ROUTES.map((route) => (
-          <li className='text-m h-full p-3 leading-[24px]' key={route.name}>
+          <li className='text-m h-full px-3 leading-10' key={route.name}>
             <Link
               href={route.href}
               className='pre-brand-item mx-1 inline-flex h-full items-center hover:text-black-200'
@@ -36,7 +41,12 @@ export const Header: FC<HeaderProps> = () => (
         ))}
       </ul>
     </nav>
-    <div>
+    <div className='flex h-full flex-shrink-0 flex-grow-0 items-center justify-end gap-3'>
+      <Input
+        startIcon={<FindIcon />}
+        placeholder='Search'
+        containerClassnames='max-w-[180px] bg-gray-100'
+      />
       <IconButton icon={<HeartIcon />} />
       <IconButton icon={<CartIcon />} />
     </div>
