@@ -1,8 +1,9 @@
 import Head from 'next/head';
 
+import { Banner } from '@/src/components/layout/banner/Banner';
 import { Header } from '@/src/components/layout/Header/Header';
 import { PreHeader } from '@/src/components/layout/PreHeader/PreHeader';
-import { Banner } from '@/src/sections';
+import { TopNews } from '@/src/sections';
 import { strapiApi } from '@/src/utils/api';
 
 // export async function getStaticProps() {
@@ -27,6 +28,7 @@ const Home = () => {
         <PreHeader />
         <Header />
         <Banner />
+        <TopNews />
       </main>
     </>
   );

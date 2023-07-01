@@ -3,9 +3,9 @@ import { FC } from 'react';
 
 import { Button, Typography } from '@/src/components';
 
-interface BannerProps {}
+interface TopNewsProps {}
 
-export const Banner: FC<BannerProps> = () => (
+export const TopNews: FC<TopNewsProps> = () => (
   <section className='mt-[3rem]'>
     <div className='align-end flex flex-col items-center text-center'>
       <Typography tag='h1' variant='title-1'>

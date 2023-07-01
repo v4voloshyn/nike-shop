@@ -1,1 +1,1 @@
-export * from './home/banner/Banner';
+export * from './home/top-news/TopNews';

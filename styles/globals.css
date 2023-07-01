@@ -93,7 +93,7 @@ body {
   }
 
   .title-5 {
-    @apply font-helvetica text-[0.7rem] font-[600];
+    @apply font-helvetica text-[0.75rem] font-[600] mr-1;
   }
 
   .link {
@@ -114,6 +114,10 @@ body {
 
   .subtitle {
     @apply font-nike text-[1.25rem] font-[400] leading-[1.75rem];
+  }
+
+  .banner {
+    @apply h-auto min-h-[58px] shadow-banner bg-gray-100 pt-2.5 truncate;
   }
 }
 

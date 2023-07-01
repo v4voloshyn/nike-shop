@@ -18,6 +18,9 @@ module.exports = {
         'gray-200': '#e5e5e5',
         'gray-300': '#7e7e7e',
       },
+      boxShadow:{
+        banner: 'inset 0 -1px 0 0 #e5e5e5'
+      }
     },
   },
   plugins: [],
