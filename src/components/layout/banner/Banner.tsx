@@ -1,27 +1,76 @@
-import Link from 'next/link';
-import { FC } from 'react';
+'use client';
 
-import { Button, Typography } from '@/src/components';
+import { cva } from 'class-variance-authority';
+import { FC, useEffect, useState } from 'react';
+
+import { Typography } from '@/src/components';
 
 interface BannerProps {}
 
-export const Banner: FC<BannerProps> = () => (
-  <section className='banner flex min-w-[200%] items-center justify-center  bg-gray-100'>
-    <div className='flex w-full flex-col items-center justify-center'>
-      <Typography variant='body-1' tag='p'>
-        Shop all new arrivals
-      </Typography>
-      <Typography variant='body-3' tag='p'>
-        Shop now
-      </Typography>
-    </div>
-    <div className='flex w-full flex-col items-center justify-center'>
-      <Typography variant='body-3' tag='p'>
-        Members: Free Shipping on Orders $50+
-      </Typography>
-      <Typography variant='body-3' tag='span'>
-        Join now
-      </Typography>
-    </div>
-  </section>
-);
+export const Banner: FC<BannerProps> = () => {
+  const [currentBanner, setCurrentBanner] = useState(0);
+  const bannersLength = 5;
+
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      setCurrentBanner((prev) => (prev + 1) % bannersLength);
+    }, 5000);
+
+    return () => {
+      clearTimeout(interval);
+    };
+  }, [currentBanner]);
+
+  const bannerWrapperClasses = cva(
+    ` whitespace-nowrap py-[0.4rem] text-center transition-all duration-1000`
+  );
+
+  const bannerItemClasses = cva(`inline-block w-full`);
+
+  return (
+    <section className='banner w-full'>
+      <ul className={bannerWrapperClasses()} style={{ translate: `-${100 * currentBanner}%` }}>
+        <li className={bannerItemClasses()}>
+          <Typography variant='body-1' tag='p'>
+            Shop all new arrivals
+          </Typography>
+          <Typography variant='body-3' tag='span'>
+            Shop now
+          </Typography>
+        </li>
+        <li className={bannerItemClasses()}>
+          <Typography variant='body-1' tag='p'>
+            Members: Free Shipping on Orders $50+
+          </Typography>
+          <Typography variant='body-3' tag='span'>
+            Join now
+          </Typography>
+        </li>
+        <li className={bannerItemClasses()}>
+          <Typography variant='body-1' tag='p'>
+            Nike Membership
+          </Typography>
+          <Typography variant='body-3' tag='span'>
+            Join now
+          </Typography>
+        </li>
+        <li className={bannerItemClasses()}>
+          <Typography variant='body-1' tag='p'>
+            Why Wait? Try Store Pickup
+          </Typography>
+          <Typography variant='body-3' tag='span'>
+            Buy online and find a store near you for pick up in less than 2 hours. Shop now.
+          </Typography>
+        </li>
+        <li className={bannerItemClasses()}>
+          <Typography variant='body-1' tag='p'>
+            Nike Membership
+          </Typography>
+          <Typography variant='body-3' tag='span'>
+            Join now
+          </Typography>
+        </li>
+      </ul>
+    </section>
+  );
+};
