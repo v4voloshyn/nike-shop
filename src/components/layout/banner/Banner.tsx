@@ -5,9 +5,7 @@ import React, { FC } from 'react';
 
 import { Typography } from '../../typography';
 
-interface BannerProps {}
-
-export const Banner: FC<BannerProps> = () => {
+export const Banner: FC = () => {
   const [currentBanner, setCurrentBanner] = React.useState(0);
   const bannersLength = 5;
 

@@ -4,7 +4,9 @@ import { Carousel } from '@/src/components';
 import { PreHeader } from '@/src/components/layout/PreHeader/PreHeader';
 import { TopNews } from '@/src/sections';
 import { strapiApi } from '@/src/utils/api';
-import { Banner, Header } from '@/ui/layout';
+import { Header } from '@/ui/layout';
+
+import { Banner } from '../src/components/layout/Banner/Banner';
 
 // export async function getStaticProps() {
 //   const response = await strapiApi.request.get('/sneakers/1');
