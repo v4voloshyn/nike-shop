@@ -1,17 +1,17 @@
 'use client';
 
 import { cva } from 'class-variance-authority';
-import { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 
 import { Typography } from '@/src/components';
 
 interface BannerProps {}
 
 export const Banner: FC<BannerProps> = () => {
-  const [currentBanner, setCurrentBanner] = useState(0);
+  const [currentBanner, setCurrentBanner] = React.useState(0);
   const bannersLength = 5;
 
-  useEffect(() => {
+  React.useEffect(() => {
     const interval = setTimeout(() => {
       setCurrentBanner((prev) => (prev + 1) % bannersLength);
     }, 5000);
