@@ -1,3 +1,4 @@
+export * from './ArrowIcon';
 export * from './CartIcon';
 export * from './ConverseIcon';
 export * from './FilterIcon';
