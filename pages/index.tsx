@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
-import { Banner } from '@/src/components/layout/banner/Banner';
-import { Header } from '@/src/components/layout/Header/Header';
+import { Carousel } from '@/src/components';
+import { Banner, Header } from '@/src/components/layout';
 import { PreHeader } from '@/src/components/layout/PreHeader/PreHeader';
 import { TopNews } from '@/src/sections';
 import { strapiApi } from '@/src/utils/api';
@@ -29,6 +29,7 @@ const Home = () => {
         <Header />
         <Banner />
         <TopNews />
+        <Carousel />
       </main>
     </>
   );
