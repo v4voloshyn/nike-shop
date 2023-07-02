@@ -3,7 +3,7 @@
 import { cva } from 'class-variance-authority';
 import React, { FC } from 'react';
 
-import { Typography } from '@/src/components';
+import { Typography } from '../../typography';
 
 interface BannerProps {}
 
