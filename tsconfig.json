@@ -24,6 +24,7 @@
       "@/utils/api": ["./src/utils/api"],
       "@/ui": ["./src/components"],
       "@/ui/icons": ["./src/components/icons"],
+      "@/ui/layout": ["./src/components/layout"],
       "@/ui/typography": ["./src/components/typography"]
     }
   },

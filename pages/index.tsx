@@ -1,10 +1,10 @@
 import Head from 'next/head';
 
 import { Carousel } from '@/src/components';
-import { Banner, Header } from '@/src/components/layout';
 import { PreHeader } from '@/src/components/layout/PreHeader/PreHeader';
 import { TopNews } from '@/src/sections';
 import { strapiApi } from '@/src/utils/api';
+import { Banner, Header } from '@/ui/layout';
 
 // export async function getStaticProps() {
 //   const response = await strapiApi.request.get('/sneakers/1');
