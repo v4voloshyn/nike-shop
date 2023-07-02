@@ -1,5 +1,3 @@
-'use client';
-
 import { cva } from 'class-variance-authority';
 import React, { FC } from 'react';
 
@@ -72,3 +70,5 @@ export const Banner: FC = () => {
     </section>
   );
 };
+
+export default Banner;
