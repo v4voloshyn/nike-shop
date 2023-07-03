@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 
 import { Typography } from '../../typography';
 
-export const BannerX: FC = () => {
+export const Banner: FC = () => {
   const [currentBanner, setCurrentBanner] = React.useState(0);
   const bannersLength = 5;
 

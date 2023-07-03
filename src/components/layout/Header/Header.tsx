@@ -25,7 +25,7 @@ export const Header: FC<HeaderProps> = () => (
     <nav className='header-nav max-h-full '>
       <ul className='flex h-full flex-wrap items-center py-3 text-base font-normal '>
         {HEADER_ROUTES.map((route) => (
-          <li className='text-m h-full px-3 leading-10' key={route.title}>
+          <li className='text-m h-full px-3 leading-[3.6rem]' key={route.title}>
             <Link
               href={route.href}
               className='pre-brand-item mx-1 inline-flex h-full items-center hover:text-black-200'

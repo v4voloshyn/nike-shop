@@ -3,9 +3,7 @@ import Head from 'next/head';
 import { Carousel } from '@/src/components';
 import { PreHeader } from '@/src/components/layout/PreHeader/PreHeader';
 import { TopNews } from '@/src/sections';
-import { Header } from '@/ui/layout';
-
-import { BannerX } from '../src/components/layout/BannerX/BannerX';
+import { Banner, Header } from '@/ui/layout';
 
 // export async function getStaticProps() {
 //   const response = await strapiApi.request.get('/sneakers/1');
@@ -28,7 +26,7 @@ const Home = () => {
       <main>
         <PreHeader />
         <Header />
-        <BannerX />
+        <Banner />
         <TopNews />
         <Carousel />
       </main>
